@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { MagnifierDirective } from './magnifier.directive';
 import { YearPipe } from './year.pipe';
 import { BoatComponent } from './boat/boat.component';
+import { CoolModule } from './cool/cool.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BoatComponent } from './boat/boat.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CoolModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

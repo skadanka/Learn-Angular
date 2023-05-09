@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy, AfterViewInit, DoCheck } from '@angular/core';
 import { VERSION} from '@angular/compiler'
+import { Observable, of } from 'rxjs'
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,20 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit, DoCheck{
 
   // Setup of the compnonet, Fetching from database or ApI
   ngOnInit() { 
-
+    // of - import from 'rxjs' add Observable pattern to Objects, supports arrays as parameters - object = of([...])
+    // add event listners
+    this.boats = of([
+      {
+        name: 'StarFire',
+        year: 1995,
+        img: '/assets/img1.avif'
+      },
+      {
+        name: 'BlackPearl',
+        year: 1885,
+        img: '/assets/img4.avif'
+      }
+    ])
   }
 
   ngAfterViewInit(): void {
